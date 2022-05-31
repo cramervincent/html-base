@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.bg-dark {
+  background-color: rgb(24, 17, 46);
+  color: rgb(248, 248, 248);
+}
+
+.bg-light {
+  background-color: rgb(248, 248, 248);
+  color: rgb(248, 248, 248);
+}
+
+.bg-primary {
+  background-color: rgb(6, 214, 160);
+}
+
+.bg-secondary {
+  background-color: rgb(255, 166, 158);
+}
+
+.text-dark {
+  color: rgb(24, 17, 46);
+}
+
+.text-light {
+  color: rgb(248, 248, 248);
+}
+
+.center-content {
+  display: flex !important;
+  justify-content: center !important;
+  justify-items: center !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: rgb(24, 17, 46);
+  overflow-x: hidden;
+}
+
+@keyframes golf {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: auto auto;
+  width: 65vw;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+}
+@media (max-width: 640px) {
+  .container {
+    width: 100vw;
+  }
+}
+
+.container-fluid {
+  margin: auto;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.row {
+  width: calc(100% - 1rem);
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+@media (max-width: 640px) {
+  .row {
+    flex-flow: column;
+  }
+}
+
+.col {
+  display: block;
+  min-width: 100%;
+}
+
+.col-1 {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 1px;
+}
+
+.col-2 {
+  display: block;
+  min-width: 50%;
+  max-width: 50%;
+  min-height: 1px;
+}
+
+.col-3 {
+  display: block;
+  min-width: 33.3333333333%;
+  max-width: 33.3333333333%;
+  min-height: 1px;
+}
+
+.col-4 {
+  display: block;
+  min-width: 25%;
+  max-width: 25%;
+  min-height: 1px;
+}
+
+.col-5 {
+  display: block;
+  min-width: 20%;
+  max-width: 20%;
+  min-height: 1px;
+}
+
+.col-6 {
+  display: block;
+  min-width: 16.6666666667%;
+  max-width: 16.6666666667%;
+  min-height: 1px;
+}
+
+.col-7 {
+  display: block;
+  min-width: 14.2857142857%;
+  max-width: 14.2857142857%;
+  min-height: 1px;
+}
+
+.col-8 {
+  display: block;
+  min-width: 12.5%;
+  max-width: 12.5%;
+  min-height: 1px;
+}
+
+.col-9 {
+  display: block;
+  min-width: 11.1111111111%;
+  max-width: 11.1111111111%;
+  min-height: 1px;
+}
+
+.col-10 {
+  display: block;
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 1px;
+}
+
+.col-11 {
+  display: block;
+  min-width: 9.0909090909%;
+  max-width: 9.0909090909%;
+  min-height: 1px;
+}
+
+.col-12 {
+  display: block;
+  min-width: 8.3333333333%;
+  max-width: 8.3333333333%;
+  min-height: 1px;
+}
+
+button {
+  border: 0;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: rgb(6, 214, 160);
+  cursor: pointer;
+}
+
+.toolbar {
+  width: 100%;
+  min-height: 4rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0;
+}
+.toolbar .brand {
+  display: block;
+  margin-left: 2rem;
+}
+.toolbar .menu {
+  position: relative;
+  height: 100%;
+  right: 2rem;
+  z-index: 1000;
+}
+.toolbar .menu .hamburger {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.toolbar .menu .hamburger.active :nth-child(1) {
+  transform: rotate(-45deg);
+  transition: 0.5s ease-in;
+  transition-delay: 600ms;
+}
+.toolbar .menu .hamburger.active :nth-child(2) {
+  opacity: 0;
+  transform: translateX(4rem);
+}
+.toolbar .menu .hamburger.active :nth-child(3) {
+  transform: rotate(45deg);
+  transition: 0.5s ease-in;
+  transition-delay: 600ms;
+}
+.toolbar .menu .hamburger span {
+  display: block;
+  width: 1.5rem;
+  height: 3px;
+  margin-top: 5px;
+  background-color: rgb(248, 248, 248);
+  animation: none;
+  position: relative;
+}
+.toolbar .menu .hamburger span.active {
+  position: absolute;
+}
+.toolbar .nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  right: -110vw;
+  top: 0;
+  margin-top: 0;
+  transition: 0.75s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  color: rgb(24, 17, 46);
+  z-index: 900;
+  list-style: none;
+}
+.toolbar .nav.active {
+  right: 0;
+}
+.toolbar .nav li {
+  margin-top: 1.5rem;
+}
+.toolbar .nav li:hover {
+  transform: translateY(-5px);
+}
+.toolbar .nav li:hover ::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: 10%;
+  background-color: rgb(255, 166, 158);
+  opacity: 0.25;
+  transform: rotate(-10deg);
+}
+.toolbar .navLink {
+  color: rgb(248, 248, 248);
+  text-decoration: none;
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+.card {
+  position: relative;
+  border-radius: 5px;
+  width: 250px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+.card .card-header {
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
+  display: block;
+  padding: 0.8rem;
+  font-weight: bold;
+  font-size: large;
+}
+.card .card-content {
+  flex-grow: 1;
+  padding: 0.8rem;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.card .card-content.image {
+  padding: 0;
+}
+.card .card-actions {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  padding: 0.8rem;
+}
+
+/*# sourceMappingURL=style.css.map */

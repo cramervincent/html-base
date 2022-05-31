@@ -1,0 +1,38 @@
+.bg-dark{
+    background-color: $dark;
+    color: $light;
+}
+.bg-light {
+    background-color: $light;
+    color: $light;
+}
+
+.bg-primary{
+    background-color: $primary;
+}
+
+.bg-secondary{
+    background-color: $secondary;
+}
+
+.text-dark{
+    color: $dark;
+}
+
+.text-light{
+    color: $light;
+}
+
+.center-content{
+    display: flex!important;
+    justify-content: center!important;
+    justify-items: center!important;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $font-h;
+}
+
+p{
+    font-family: $font-p;
+}

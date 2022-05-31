@@ -1,0 +1,106 @@
+.toolbar {
+  width: 100%;
+  min-height: 4rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0;
+
+  .brand {
+    display: block;
+    margin-left: 2rem;
+  }
+  .menu {
+    position: relative;
+    height: 100%;
+    right: 2rem;
+    z-index: 1000;
+    .hamburger {
+      position: relative;
+      z-index: 1000;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+      &.active {
+        :nth-child(1) {
+          transform: rotate(-45deg);
+          transition: 0.5s ease-in;
+          transition-delay: 600ms;
+        }
+        :nth-child(2) {
+          opacity: 0;
+          transform: translateX(4rem);
+        }
+        :nth-child(3) {
+          transform: rotate(45deg);
+          transition: 0.5s ease-in;
+          transition-delay: 600ms;
+        }
+      }
+      span {
+        display: block;
+        width: 1.5rem;
+        height: 3px;
+        margin-top: 5px;
+        background-color: $light;
+        animation: none;
+        position: relative;
+        &.active {
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  .nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: -110vw;
+    top: 0;
+    margin-top: 0;
+    transition: 0.75s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    color: $dark;
+    z-index: 900;
+    list-style: none;
+    &.active {
+      right: 0;
+    }
+    li {
+      margin-top: 1.5rem;
+      &:hover {
+        transform: translateY(-5px);
+        ::after{
+          content: '';
+          display: block;
+          position: absolute;
+          height: 50%;
+          width: 100%;
+          bottom:10%;
+          background-color: $secondary;
+          opacity: 0.25;
+          transform: rotate(-10deg);
+        }
+      }
+    }
+  }
+  .navLink {
+    color: $light;
+    text-decoration: none;
+    font-family: $font-h;
+    font-weight: 600;
+    font-size: xx-large;
+  }
+}
